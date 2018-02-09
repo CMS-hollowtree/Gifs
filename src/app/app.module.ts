@@ -8,7 +8,9 @@ import { Slides } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RestProvider } from '../providers/rest/rest';
+
 import { PhotoLibrary } from '@ionic-native/photo-library';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { PhotoLibrary } from '@ionic-native/photo-library';
     Slides,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RestProvider,
-    PhotoLibrary
+    PhotoLibrary,
+    SocialSharing
   ]
 })
 export class AppModule {}

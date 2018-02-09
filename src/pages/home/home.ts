@@ -4,6 +4,7 @@ import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 import { RestProvider } from './../../providers/rest/rest';
 import { PhotoLibrary } from '@ionic-native/photo-library';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 @Component({
   selector: 'page-home',
@@ -14,7 +15,7 @@ export class HomePage {
 	appName:string = 'Gifs';
 	data:any;
 
-  constructor(public navCtrl: NavController, public restProvider: RestProvider,  public photoLibrary: PhotoLibrary) {
+  constructor(public navCtrl: NavController, public restProvider: RestProvider,  public photoLibrary: PhotoLibrary, private socialSharing: SocialSharing) {
   	this.getGifs(0);
   }
 
@@ -40,6 +41,10 @@ export class HomePage {
 	
 	}
 
+	regularShare(id){
+	  var msg = 'https://giphy.com/embed/'+id
+	  this.socialSharing.share(msg, null, null, null);
+	}
 
 
   getGifs(offset){
