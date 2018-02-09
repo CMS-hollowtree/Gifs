@@ -28,12 +28,12 @@ export class HomePage {
   saveToAlbum(id){
 	let album = this.appName;
 	let url = 'https://media.giphy.com/media/'+id+'/giphy.gif'
-	  this.photoLibrary.saveImage(id,album).then((entry=>{
+	  this.photoLibrary.saveImage(url,album).then((entry=>{
 	    console.log('download complete: ' + entry.photoURL);
 	  }),
 	  (error) => {
 	    // handle error
-		console.log(error, url);
+		alert(error);
   		});
 	}
 
