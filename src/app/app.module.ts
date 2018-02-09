@@ -11,6 +11,7 @@ import { RestProvider } from '../providers/rest/rest';
 
 import { PhotoLibrary } from '@ionic-native/photo-library';
 import { SocialSharing } from '@ionic-native/social-sharing';
+import { AdMobFree } from '@ionic-native/admob-free';    
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RestProvider,
     PhotoLibrary,
-    SocialSharing
+    SocialSharing,
+    AdMobFree
   ]
 })
 export class AppModule {}
