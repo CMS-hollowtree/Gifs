@@ -42,8 +42,8 @@ export class HomePage {
 	}
 
 	regularShare(id){
-	  var msg = 'https://giphy.com/embed/'+id
-	  this.socialSharing.share(msg, null, null, null);
+	  var img = 'https://media.giphy.com/media/'+id+'/giphy.gif'
+	  this.socialSharing.share(null, null, img, null);
 	}
 
 
