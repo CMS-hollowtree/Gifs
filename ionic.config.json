@@ -1,0 +1,8 @@
+{
+  "name": "Gifs",
+  "app_id": "ab0dd79b",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
