@@ -15,13 +15,14 @@ import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
 export class HomePage {
 	@ViewChild(Slides) slides: Slides;
 	appName:string = 'Gifs';
+	admobId:string = 'ca-app-pub-0529413882147962/9260691783';
 	data:any;
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider,  public photoLibrary: PhotoLibrary, private socialSharing: SocialSharing, private admobFree : AdMobFree) {
   	this.getGifs(0);
   }
 
-  ionViewDidLoad(){
+  ngAfterViewInit(){
   	this.showBannerAd();
   }
 
@@ -36,7 +37,7 @@ export class HomePage {
   	const bannerConfig: AdMobFreeBannerConfig = {
 	 // add your config here
 	 // for the sake of this example we will just use the test config
-	 id: 'ca-app-pub-0529413882147962/9260691783',
+	 id: this.admobId,
 	 isTesting: true,
 	 autoShow: true
 	};

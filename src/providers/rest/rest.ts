@@ -13,7 +13,7 @@ export class RestProvider {
 	url:string;
 	offset:number;
 	limit:number = 10;
-	query:string = 'funny not funny';
+	query:string = 'pepe the frog';
 	apiKey:string = 'dc6zaTOxFJmzC';
 
   constructor(public http: HttpClient) {
