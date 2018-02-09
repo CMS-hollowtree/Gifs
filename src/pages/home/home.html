@@ -8,7 +8,8 @@
 
 <ion-content padding>
 	<ion-slides *ngIf="data" (ionSlideDidChange)="slideChanged()">
-		<ion-slide *ngFor="let img of data" >
+		<ion-slide *ngFor="let img of data">
+			<button ion-button block (click)="saveToAlbum('https://media.giphy.com/media/'+img['id']+'/giphy.gif')">Save Gif</button>
 			<h2>{{img['title']}}</h2>
 	  		<img src="https://media.giphy.com/media/{{img['id']}}/giphy.gif">
 		</ion-slide>

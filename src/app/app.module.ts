@@ -8,6 +8,7 @@ import { Slides } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RestProvider } from '../providers/rest/rest';
+import { PhotoLibrary } from '@ionic-native/photo-library';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RestProvider } from '../providers/rest/rest';
     SplashScreen,
     Slides,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RestProvider
+    RestProvider,
+    PhotoLibrary
   ]
 })
 export class AppModule {}
