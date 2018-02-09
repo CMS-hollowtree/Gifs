@@ -14,7 +14,7 @@ import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
 })
 export class HomePage {
 	@ViewChild(Slides) slides: Slides;
-	appName:string = 'Gifs';
+	appName:string = 'PepeTheFrog - Gifs';
 	admobId:string = 'ca-app-pub-0529413882147962/9260691783';
 	data:any;
 

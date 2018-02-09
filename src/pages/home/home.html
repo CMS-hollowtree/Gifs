@@ -14,7 +14,7 @@
 			    <button ion-fab color="danger"><ion-icon name="share-alt"></ion-icon></button>
 			    <ion-fab-list side="left">
 			      <button (click)="saveToAlbum(img['id'])" ion-fab color="dark"><ion-icon name="cloud-download"></ion-icon></button>
-			      <button ion-fab color="dark"><ion-icon name="copy"></ion-icon></button>
+			      <a href="{{img['embed_url']}}" target="_blank"><button ion-fab color="dark"><ion-icon name="link"></ion-icon></button></a>
 			      <button (click)="regularShare(img['id'])" ion-fab color="dark"><ion-icon name="share"></ion-icon></button>
 			    </ion-fab-list>
 	  		</ion-fab>
