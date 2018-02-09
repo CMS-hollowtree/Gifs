@@ -26,15 +26,18 @@ export class HomePage {
 
 
   saveToAlbum(id){
-	let album = this.appName;
-	let url = 'https://media.giphy.com/media/'+id+'/giphy.gif'
-	  this.photoLibrary.saveImage(url,album).then((entry=>{
-	    console.log('download complete: ' + entry.photoURL);
-	  }),
-	  (error) => {
-	    // handle error
-		alert(error);
-  		});
+  	this.photoLibrary.requestAuthorization().then(() => {
+	 	let album = this.appName;
+		let url = 'https://media.giphy.com/media/'+id+'/giphy.gif'
+		  this.photoLibrary.saveImage(url,album).then((entry=>{
+		    console.log('download complete: ' + entry.photoURL);
+		  }),
+	  	(error) => {
+	    	// handle error
+			alert(error);
+  			});
+		}).catch(err => alert('permissions weren\'t granted'));
+	
 	}
 
 

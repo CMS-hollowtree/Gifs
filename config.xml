@@ -84,4 +84,5 @@
     <plugin name="cordova-plugin-photo-library" spec="^2.1.0">
         <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value="To save images" />
     </plugin>
+    <engine name="android" spec="7.0.0" />
 </widget>
