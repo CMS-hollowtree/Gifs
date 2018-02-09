@@ -36,7 +36,7 @@ export class HomePage {
   	const bannerConfig: AdMobFreeBannerConfig = {
 	 // add your config here
 	 // for the sake of this example we will just use the test config
-	 id: 'ca-app-pub-0529413882147962~4419428641',
+	 id: 'ca-app-pub-0529413882147962/9260691783',
 	 isTesting: false,
 	 autoShow: true
 	};
