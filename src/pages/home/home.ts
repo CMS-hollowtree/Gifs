@@ -25,14 +25,15 @@ export class HomePage {
   }
 
 
-  saveToAlbum(url){
+  saveToAlbum(id){
 	let album = this.appName;
-	  this.photoLibrary.saveImage(url,album).then((entry=>{
+	let url = 'https://media.giphy.com/media/'+id+'/giphy.gif'
+	  this.photoLibrary.saveImage(id,album).then((entry=>{
 	    console.log('download complete: ' + entry.photoURL);
 	  }),
 	  (error) => {
 	    // handle error
-		console.log(error);
+		console.log(error, url);
   		});
 	}
 
@@ -44,6 +45,7 @@ export class HomePage {
   			if(offset > 0){
   				res.forEach(obj =>{
   					this.data.push(obj);
+  					console.log(obj);
   				});
   				
   				console.log('getting more', this.data)
